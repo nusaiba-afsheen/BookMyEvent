@@ -1,178 +1,142 @@
-$desktop: 1024px;
+//colors
+$black:#212121;
+$brown: #323232;
+$green: #0D7377;
+$green-light:#49B2B6;
+$green-very-light:#a0eff1;
+$teal: #14FFEC;
+$logo-font: 'Righteous', cursive;
+$heading-font: 'Ubuntu', sans-serif;
+$content-font: 'Source Sans Pro', sans-serif;
 
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: $desktop) {
-      @content;
-		}
+
+*{
+	background-color: $black;
+	color: $green-very-light;
+	font-family: $content-font;
+	margin: 0;
+	padding: 0;
+	
+}
+
+header{
+	display: block;
+	background-color: $brown;
+	color: $green;
+	position: fixed;
+	width:100%;
+	padding: 0.5rem;
+
+	a{
+		display:inline;
+		float: right;
+		
+		background-color: $brown;
+		margin:0.25rem;
+		padding-right:1rem;
+		font-size: min(5vw,1.5rem);
+	}
+	
+
+	.logo{
+		float:left;
+		font-family: $logo-font;
+		font-size: min(7vw,2rem);
+		
+		background-color: $brown;
 	}
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+.padding-btw-header-body{
+	padding-top: 4rem;
 }
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	background-color: #e6e6e6;
+.heading{
+	color: $teal;
+	font-family: $heading-font;
+	text-align: center;
+	font-size: max(7vw,3rem);
+	margin-bottom: 1rem;
 }
 
-.container {
+.card{
+	background-color: $brown;
+	border-style:solid;
+	border-radius: 25px;
+	border-color: #0D7377;
+	padding: 0.25rem;
+	width: 250px;
+	text-align: left;
+	margin: 2rem 1rem;
+	margin-inline:auto;
+	
+
+
+	.card-img{
+		width: 250px;
+		margin-inline:auto;
+		border-radius: 20px 20px 0px 0px;
+	}
+
+	.card-text{
+		background-color: $brown;
+		margin:0.75rem 0rem;
+		padding:0rem 0.25rem ;
+
+		a{
+			background-color: $brown;
+			color: $teal;
+			font-family: $heading-font;
+			font-size: 2rem;
+			text-decoration: none;
+		}
+		p{
+			background-color: $brown;
+		}
+		
+	}
+
+	.primary-btn{
+		margin: 0rem 2.5rem 1rem;
+	}
+
+
+}
+
+.event-cards{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	margin: 20px 0 80px;
 }
 
-.card {
-	width: 300px;
-	margin: 10px;
-	background-color: white;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+// .material-symbols-outlined {
+// 	font-variation-settings:
+// 	'FILL' 0,
+// 	'wght' 400,
+// 	'GRAD' 0,
+// 	'opsz' 48;
+// 	background-color: $teal;
+//   }
 
-	&:hover {
-		.card__caption {
-			top: 50%;
-			transform: translateY(-50%);
-		}
-
-		.card__image {
-			transform: translateY(-10px);
-		}
-
-		.card__thumb {
-			&::after {
-				top: 0;
-			}
-		}
-
-		.card__snippet {
-			margin: 20px 0;
-		}
-	}
-
-	&__thumb {
-		position: relative;
-		max-height: 400px;
-		overflow: hidden;
-		
-		@include breakpoint(desktop) {
-			max-height: 500px;
-		}
-
-		&::after {
-			position: absolute;
-			top: 0;
-			display: block;
-			content: '';
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(0deg, rgba(0, 0, 0, .5) 40%, rgba(255, 255 ,255 , 0) 100%);
-			transition: .3s;
-			
-			@include breakpoint(desktop) {
-				top: calc(100% - 140px);
-			}
-		}
-	}
-	
-	&__image {
-		transition: .5s ease-in-out;
-	}
-	
-	&__caption {
-		position: absolute;
-		top: 50%;
-		z-index: 1;
-		padding: 0 20px;
-		color: white;
-		transform: translateY(-50%);
-		text-align: center;
-		transition: .3s;
-
-		@include breakpoint(desktop) {
-			top: calc(100% - 110px);
-			transform: unset;
-		}
-	}
-
-	&__title {
-		display: -webkit-box;
-		max-height: 85px;
-    overflow: hidden;
-		font-family: 'Playfair Display', serif;
-		font-size: 23px;
-		line-height: 28px;
-		text-shadow: 0px 1px 5px black;
-		text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-	}
-
-	&__snippet {
-		display: -webkit-box;
-		max-height: 150px;
-		margin: 20px 0;
-		overflow: hidden;
-		font-family: 'Roboto', sans-serif;
-		font-size: 16px;
-		line-height: 20px;
-		text-overflow: ellipsis;
-		transition: .5s ease-in-out;
-    -webkit-line-clamp: 5;
-		-webkit-box-orient: vertical;
-		
-		@include breakpoint(desktop) {
-			margin: 60px 0;
-		}
-	}
-
-	&__button {
-		display: inline-block;
-		padding: 10px 20px;
-		color: white;
-		border: 1px solid white;
-		font-family: 'Roboto', sans-serif;
-		font-size: 12px;
-		text-transform: uppercase;
-		text-decoration: none;
-		transition: .3s;
-
-		&:hover {
-			color: black;
-			background-color: white;
-		}
-	}
-}
-
-.disclaimer {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	z-index: 2;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 20px 10px;
-	background-color: white;
-	transform: translateX(-50%);
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+.primary-btn {
+	background-color: $teal;
+	color: $black;
 	text-align: center;
-	
-	&__link {
-		color: #755D87;
-		text-decoration: none;
+	font-size: 1rem;
+	padding: 0.5rem 3.5rem;
+	border-style: solid;
+	border-color:$teal;
+	border-radius: 5px;	
+
+	&:hover{
+		background-color: $brown;
+		color: $teal;
 	}
+}
+
+footer{
+	background-color: $teal;
+	color:$black;
+	margin-top: 3rem;
+	padding: 3rem;
+	text-align: center;
 }
