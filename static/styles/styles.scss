@@ -1,3 +1,4 @@
+// ----------------------------------------------------#generic--------------------------------------
 //colors
 $black:#212121;
 $brown: #323232;
@@ -5,6 +6,8 @@ $green: #0D7377;
 $green-light:#49B2B6;
 $green-very-light:#a0eff1;
 $teal: #14FFEC;
+
+//fonts
 $logo-font: 'Righteous', cursive;
 $heading-font: 'Ubuntu', sans-serif;
 $content-font: 'Source Sans Pro', sans-serif;
@@ -23,8 +26,10 @@ header{
 	display: block;
 	background-color: $brown;
 	color: $green;
+	
 	position: fixed;
 	width:100%;
+	margin-inline: 0;
 	padding: 0.5rem;
 
 	a{
@@ -32,6 +37,7 @@ header{
 		float: right;
 		
 		background-color: $brown;
+		text-decoration: none;
 		margin:0.25rem;
 		padding-right:1rem;
 		font-size: min(5vw,1.5rem);
@@ -47,11 +53,23 @@ header{
 	}
 }
 
+footer{
+	background-color: $teal;
+	color:$black;
+	margin-top: 3rem;
+	padding: 3rem;
+	text-align: center;
+}
+
+.body-style{
+	margin-inline: max(0.5rem,6vw);
+}
+
 .padding-btw-header-body{
 	padding-top: 4rem;
 }
 
-.heading{
+h1{
 	color: $teal;
 	font-family: $heading-font;
 	text-align: center;
@@ -59,6 +77,24 @@ header{
 	margin-bottom: 1rem;
 }
 
+.primary-btn {
+	background-color: $teal;
+	color: $black;
+	text-align: center;
+	font-size: 1rem;
+	padding: 0.5rem 3.5rem;
+	border-style: solid;
+	border-color:$teal;
+	border-radius: 5px;	
+
+	&:hover{
+		background-color: $brown;
+		color: $teal;
+	}
+}
+
+
+// -----------------------------------------------------------#home-page------------------------------------------------------
 .card{
 	background-color: $brown;
 	border-style:solid;
@@ -108,35 +144,23 @@ header{
 	flex-wrap: wrap;
 }
 
-// .material-symbols-outlined {
-// 	font-variation-settings:
-// 	'FILL' 0,
-// 	'wght' 400,
-// 	'GRAD' 0,
-// 	'opsz' 48;
-// 	background-color: $teal;
-//   }
 
-.primary-btn {
-	background-color: $teal;
-	color: $black;
-	text-align: center;
-	font-size: 1rem;
-	padding: 0.5rem 3.5rem;
-	border-style: solid;
-	border-color:$teal;
-	border-radius: 5px;	
-
-	&:hover{
-		background-color: $brown;
-		color: $teal;
-	}
+.forward_icon{
+  background-color: $brown;
 }
 
-footer{
-	background-color: $teal;
-	color:$black;
-	margin-top: 3rem;
-	padding: 3rem;
-	text-align: center;
+
+// --------------------------------------------------------#event-page-----------------------------------
+
+.evt-page-img{
+	width:min(90%,500px);
+	display: block;
+	margin-inline: auto;
+	padding: 1rem 0 2rem;
 }
+
+.evt-specs{
+	list-style: none;
+	padding: 1rem 0 2rem;
+}
+

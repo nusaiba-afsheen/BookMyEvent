@@ -12,12 +12,14 @@ header {
   color: #0D7377;
   position: fixed;
   width: 100%;
+  margin-inline: 0;
   padding: 0.5rem;
 }
 header a {
   display: inline;
   float: right;
   background-color: #323232;
+  text-decoration: none;
   margin: 0.25rem;
   padding-right: 1rem;
   font-size: min(5vw, 1.5rem);
@@ -29,16 +31,43 @@ header .logo {
   background-color: #323232;
 }
 
+footer {
+  background-color: #14FFEC;
+  color: #212121;
+  margin-top: 3rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.body-style {
+  margin-inline: max(0.5rem, 6vw);
+}
+
 .padding-btw-header-body {
   padding-top: 4rem;
 }
 
-.heading {
+h1 {
   color: #14FFEC;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-size: max(7vw, 3rem);
   margin-bottom: 1rem;
+}
+
+.primary-btn {
+  background-color: #14FFEC;
+  color: #212121;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem 3.5rem;
+  border-style: solid;
+  border-color: #14FFEC;
+  border-radius: 5px;
+}
+.primary-btn:hover {
+  background-color: #323232;
+  color: #14FFEC;
 }
 
 .card {
@@ -81,25 +110,18 @@ header .logo {
   flex-wrap: wrap;
 }
 
-.primary-btn {
-  background-color: #14FFEC;
-  color: #212121;
-  text-align: center;
-  font-size: 1rem;
-  padding: 0.5rem 3.5rem;
-  border-style: solid;
-  border-color: #14FFEC;
-  border-radius: 5px;
-}
-.primary-btn:hover {
+.forward_icon {
   background-color: #323232;
-  color: #14FFEC;
 }
 
-footer {
-  background-color: #14FFEC;
-  color: #212121;
-  margin-top: 3rem;
-  padding: 3rem;
-  text-align: center;
+.evt-page-img {
+  width: min(90%, 500px);
+  display: block;
+  margin-inline: auto;
+  padding: 1rem 0 2rem;
+}
+
+.evt-specs {
+  list-style: none;
+  padding: 1rem 0 2rem;
 }/*# sourceMappingURL=styles.css.map */
