@@ -72,10 +72,33 @@ h2 {
   border-style: solid;
   border-color: #14FFEC;
   border-radius: 5px;
+  display: block;
+  margin-inline: auto;
 }
 .primary-btn:hover {
   background-color: #323232;
   color: #14FFEC;
+}
+
+.secondary-btn {
+  background-color: #323232;
+  color: #14FFEC;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-style: solid;
+  border-color: #14FFEC;
+  border-radius: 5px;
+  display: block;
+  margin: 0.5rem auto;
+}
+.secondary-btn:hover {
+  background-color: #14FFEC;
+  color: #323232;
+}
+
+.hide-element {
+  opacity: 50%;
 }
 
 .card {
@@ -134,37 +157,37 @@ h2 {
   padding: 1rem 0 2rem;
 }
 
-.register-form {
+.register-form, .create-event-form, .create-register-form {
   display: block;
   text-align: center;
   padding-top: 2rem;
 }
-.register-form form {
+.register-form form, .create-event-form form, .create-register-form form {
   display: inline-block;
   margin-inline: auto;
   text-align: left;
   width: min(90%, 400px);
 }
-.register-form h4 {
+.register-form h4, .create-event-form h4, .create-register-form h4 {
   text-transform: uppercase;
   text-align: center;
   padding: 0.5rem 0;
   color: #a0eff1;
 }
-.register-form ul {
+.register-form ul, .create-event-form ul, .create-register-form ul {
   list-style: none;
 }
 
 .detail-container {
   padding: 0.75rem 0;
 }
-.detail-container input, .detail-container select {
+.detail-container input, .detail-container select, .detail-container textarea {
   display: block;
   width: 100%;
   padding: 0.25rem;
   background-color: #323232;
 }
-.detail-container input:hover, .detail-container select:hover {
+.detail-container input:hover, .detail-container select:hover, .detail-container textarea:hover {
   background-color: #0D7377;
 }
 

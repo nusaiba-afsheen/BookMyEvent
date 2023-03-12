@@ -94,11 +94,35 @@ h2{
 	border-style: solid;
 	border-color:$teal;
 	border-radius: 5px;	
+	display: block;
+	margin-inline:auto;
 
 	&:hover{
 		background-color: $brown;
 		color: $teal;
 	}
+}
+
+.secondary-btn {
+	background-color: $brown;
+	color: $teal;
+	text-align: center;
+	font-size: 1rem;
+	padding: 0.5rem;
+	border-style: solid;
+	border-color:$teal;
+	border-radius: 5px;	
+	display: block;
+	margin:0.5rem auto;
+
+	&:hover{
+		background-color: $teal;
+		color: $brown;
+	}
+}
+
+.hide-element{
+	opacity: 50%;
 }
 
 
@@ -174,7 +198,7 @@ h2{
 
 // -------------------------------------#register-page-----------------------------
 
-.register-form{
+.register-form, .create-event-form , .create-register-form{
 	display: block;
 	text-align: center;
 	padding-top: 2rem;
@@ -205,14 +229,14 @@ h2{
 .detail-container{
 	padding: 0.75rem 0;
 
-	input,select{
+	input,select,textarea{
 		display:block;
 		width: 100%;
 		padding: 0.25rem;
 		background-color: $brown;
 	}
 
-	input:hover, select:hover{
+	input:hover, select:hover, textarea:hover{
 		background-color: $green;
 	}
 

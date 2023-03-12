@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookMyEvent</title>
+    <title>Admin-BookMyEvent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300;400;700&display=swap&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;1,700&display=swap" rel="stylesheet">
@@ -12,21 +12,90 @@
     <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 <header>
-        <p class="logo">BookMyEvent</p>
-        <a href="">Events</a>
-        <a href="">About</a>
-        
+        <p class="logo">Admin-BookMyEvent</p>
+        <a href="">Home</a>
+
 </header>
 <body>
 
     <div class="padding-btw-header-body"></div>
-
     <div class="body-style">
 
-        <h1>Let Us Pledge</h1>
-        <h2>Register</h2>
+        <h1>Add Event Details</h1>
+        <div class="create-event-form">
+            <form method="POST">
+
+                <div class="detail-container">
+                    <label for="event-name">Event Name </label>
+                    <input type="text" id="event-name">
+                </div>
+
+                <div class="detail-container-radio">
+                    Event Type <br>
+                    <input type="radio" id="tech" name="event-type">
+                    <label for="event-type">Tech</label>
+                    <input type="radio" id="non-tech" name="event-type">
+                    <label for="event-type">Non-Tech</label>
+                </div>
+
+                <div class="detail-container-radio">
+                    Event Mode <br>
+                    <input type="radio" id="online" name="event-mode">
+                    <label for="event-mode">Online</label>
+                    <input type="radio" id="offline" name="event-mode">
+                    <label for="event-mode">Offline</label>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-desc">Event Description </label>
+                    <textarea id="event-desc"></textarea>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-team-size">Team size ("1" for solo events)</label>
+                    <input type="number" id="event-team-size"></input>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-time">Timings </label>
+                    <input type="text" id="event-time">
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-date">Date</label>
+                    <input type="text" id="event-date">
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-time">Timings </label>
+                    <input type="text" id="event-time">
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-venue">Venue / Meet Link</label>
+                    <input type="text" id="event-venue-or-link">
+                </div>
+               
+                <div class="detail-container">
+                    <label for="event-fee">Entry Fee ("-" for free event)</label>
+                    <input type="number" id="event-team-size"></input>
+                </div>
+
+                <div class="detail-container invoice-container">
+                    <label for="event-poster">Add event poster</label>
+                    <input type="file" id="event-poster" name="event-poster" required>
+                </div>
+                
+                <input type="submit" class="primary-btn" value="Confirm Event" style="display: block; margin:2rem auto;">
+
+            </form>
+        </div>
+
+    
         
-        <div class="register-form">
+               
+        <!-- <h1 style="margin-top: 3rem;;">Create Registration Form</h1>
+        <div class="create-register-form">
             <form method="POST">
             
                 <ul class="register-members-list">
@@ -71,13 +140,13 @@
                             </div>
 
 
-                            <!-- <div class="detail-container">
+                            <div class="detail-container">
                                 
                             </div> -->
 
                             
                             
-                            <div class="detail-container">
+                            <!-- <div class="detail-container">
                                 <label for="dept">Choose your department </label>
                                 <select name="dept" id="dept">
                                     <option>CSE</option>
@@ -122,7 +191,7 @@
                 
                 
             </form>
-        </div>
+        </div> -->
       
         
 
@@ -132,91 +201,12 @@
 
 
     </div> 
-</div>
+    
+    </div>
+
+    <script src="../static/scripts/admin.js"></script>
 </body>
 <footer>
     &copy Nusaiba Afsheen
 </footer>
 </html>
-
-<!--                     <h5> Member 1 </h5>
-            <div class="member">
-                <label for="fullname">Name: </label>
-                <input type="text" id="fullname">
-                <br>
-                
-                <label for="emailid">Email: </label>
-                <input type="email" id="emailid">
-                <br>
-                
-                <label for="clg-reg-no">Registration No.: </label>
-                <input type="text" id="clg-reg-no">
-                <br>					
-                
-                Choose your college:
-                <input type="radio" id="ssn" name="clg">
-                <label for="clg">SSN</label>
-                <input type="radio" id="snu" name="clg">
-                <label for="clg">SNU</label>
-                <br>
-                
-                <label for="dept">Choose your department: </label>
-                <select name="dept" id="dept">
-                    <option>CSE</option>
-                    <option>IT</option>
-                    <option>ECE</option>
-                    <option>EEE</option>
-                    <option>BME</option>
-                    <option>CHEM</option>
-                    <option>MECH</option>
-                    <option>CIVIL</option>
-                    ADD SNU DEPTS 
-                </select>
-                <br>
-                
-                <label for="phno">Phone Number</label>
-                <input type="number" id="phno" name="phno">
-            </div>
-                </li>
-
-                <li>
-                    <h5> Member 2 </h5>
-                        <div class="member">
-                        <label for="fullname">Name: </label>
-                        <input type="text" id="fullname">
-                        <br>
-                        
-                        <label for="emailid">Email: </label>
-                        <input type="email" id="emailid">
-                        <br>
-                        
-                        <label for="clg-reg-no">Registration No.: </label>
-                        <input type="text" id="clg-reg-no">
-                        <br>
-                        
-                        
-                        Choose your college:
-                        <input type="radio" id="ssn" name="clg">
-                        <label for="clg">SSN</label>
-                        <input type="radio" id="snu" name="clg">
-                        <label for="clg">SNU</label>
-                        <br>
-                        
-                        <label for="dept">Choose your department: </label>
-                        <select name="dept" id="dept">
-                            <option>CSE</option>
-                            <option>IT</option>
-                            <option>ECE</option>
-                            <option>EEE</option>
-                            <option>BME</option>
-                            <option>CHEM</option>
-                            <option>MECH</option>
-                            <option>CIVIL</option>
-                            
-                        </select>
-                        <br>
-                        
-                        <label for="phno">Phone Number</label>
-                        <input type="number" id="phno" name="phno">
-                    </div>
-                </li> -->
