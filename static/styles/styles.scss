@@ -77,6 +77,14 @@ h1{
 	margin-bottom: 1rem;
 }
 
+h2{
+	color: $teal;
+	font-family: $heading-font;
+	text-align: center;
+	font-size: max(5vw,2rem);
+	margin-bottom: 1rem;
+}
+
 .primary-btn {
 	background-color: $teal;
 	color: $black;
@@ -163,4 +171,59 @@ h1{
 	list-style: none;
 	padding: 1rem 0 2rem;
 }
+
+// -------------------------------------#register-page-----------------------------
+
+.register-form{
+	display: block;
+	text-align: center;
+	padding-top: 2rem;
+	
+	form{
+		display: inline-block;
+		margin-inline:auto;
+		text-align: left;
+		width:min(90%,400px);
+
+	}
+
+	h4{
+		text-transform:uppercase;
+		text-align: center;
+		padding: 0.5rem 0;
+		color:$green-very-light;
+	}
+
+	
+
+	ul{
+		list-style: none;
+	}
+	
+}
+
+.detail-container{
+	padding: 0.75rem 0;
+
+	input,select{
+		display:block;
+		width: 100%;
+		padding: 0.25rem;
+		background-color: $brown;
+	}
+
+	input:hover, select:hover{
+		background-color: $green;
+	}
+
+}
+
+.detail-container-radio{
+	padding: 0.75rem 0;
+}
+
+.invoice-container{
+	color:$green-very-light;
+}
+
 

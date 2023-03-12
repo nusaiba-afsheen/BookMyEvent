@@ -55,6 +55,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  color: #14FFEC;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: max(5vw, 2rem);
+  margin-bottom: 1rem;
+}
+
 .primary-btn {
   background-color: #14FFEC;
   color: #212121;
@@ -124,4 +132,46 @@ h1 {
 .evt-specs {
   list-style: none;
   padding: 1rem 0 2rem;
+}
+
+.register-form {
+  display: block;
+  text-align: center;
+  padding-top: 2rem;
+}
+.register-form form {
+  display: inline-block;
+  margin-inline: auto;
+  text-align: left;
+  width: min(90%, 400px);
+}
+.register-form h4 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 0;
+  color: #a0eff1;
+}
+.register-form ul {
+  list-style: none;
+}
+
+.detail-container {
+  padding: 0.75rem 0;
+}
+.detail-container input, .detail-container select {
+  display: block;
+  width: 100%;
+  padding: 0.25rem;
+  background-color: #323232;
+}
+.detail-container input:hover, .detail-container select:hover {
+  background-color: #0D7377;
+}
+
+.detail-container-radio {
+  padding: 0.75rem 0;
+}
+
+.invoice-container {
+  color: #a0eff1;
 }/*# sourceMappingURL=styles.css.map */
