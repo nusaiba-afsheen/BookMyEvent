@@ -27,7 +27,7 @@
         <h2>Register</h2>
         
         <div class="register-form">
-            <form method="POST">
+            <form id="register-form-id">
             
                 <ul class="register-members-list">
                     <li>
@@ -35,10 +35,10 @@
                         <div class="member">
                             <div class="detail-container">
                                 <label for="fullname">Name </label>
-                                <input type="text" id="fullname">
+                                <input type="text" id="fullname" />
                             </div>
                             
-                            <div class="detail-container">
+                            <!-- <div class="detail-container">
                                 <label for="emailid">Email </label>
                                 <input type="email" id="emailid">
                             </div>
@@ -71,12 +71,12 @@
                             </div>
 
 
-                            <!-- <div class="detail-container">
+                           <div class="detail-container">
                                 
                             </div> -->
 
                             
-                            
+    <!--                             
                             <div class="detail-container">
                                 <label for="dept">Choose your department </label>
                                 <select name="dept" id="dept">
@@ -98,7 +98,7 @@
                             <div class="detail-container">
                                 <label for="phno">Phone Number</label>
                                 <input type="number" id="phno" name="phno">
-                            </div>
+                            </div> -->
 
                         </div>	
                     </li>
@@ -108,11 +108,11 @@
                 </ul>
                         
                 
-                <div class="detail-container invoice-container">
+                <!-- <div class="detail-container invoice-container">
                     <label for="invoice"><h4 style="color:#14FFEC;">Add payment invoice</h4></label>
                     <input type="file" id="invoice" name="invoice" required>
-                </div>
-                
+                </div> -->
+                 
     
                 
                 <input type="submit" class="primary-btn" value="Submit" style="display: block; margin:2rem auto;">
@@ -132,7 +132,25 @@
 
 
     </div> 
-</div>
+
+    <script src="../static/scripts/register-event.js"></script>
+<!-- </div> -->
+
+<!-- <script>
+    // window.onload=function(){
+        
+        var regForm=document.getElementById("register-form-id")
+
+    regForm.addEventListener("submit",function(e){
+        e.preventDefault();
+        console.log(document.getElementById("fullname").value);
+    })
+//}
+    
+
+
+</script> -->
+
 </body>
 <footer>
     &copy Nusaiba Afsheen
