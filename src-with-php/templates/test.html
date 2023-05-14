@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+	</script>
+</head>
+
+<body ng-app="myApp">
+	<p>
+		<a href="#/!">
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20190221234751/geeksforgeeks-logo1.png"
+				alt="GeeksforGeeks"
+				style="width: 90vw;">
+		</a>
+	</p>
+	<a href="#!courses">Courses@geeksforgeeks</a>
+	<br>
+	<a href="#!internships">Internships@geeksforgeeks</a>
+	<div ng-view></div>
+
+	<script>
+		const app = angular.module("myApp", ["ngRoute"]);
+		app.config(function ($routeProvider) {
+			$routeProvider
+				.when("/", {
+					template: `<h1>Welcome to GeeksForGeeks</h1>
+					<p>
+						Click on the links to change this content
+					</p>`
+				})
+				.when("/courses", {
+					template: `<h1>Courses Offered</h1>
+					<p>
+						<ul>
+						<li>Machine Learning Foundation</li>
+						<li>Geeks Classes</li>
+						<li>System Design</li>
+						</ul>
+					</p>`
+				})
+				.when("/internships", {
+					template: `<h1>Hire With Us</h1>
+					<p>
+						<ul>
+						<li>Software Developer</li>
+						<li>Technical Content Writer</li>
+						<li>Technical Content Engineer</li>
+						</ul>
+					</p>`
+				});
+		});
+	</script>
+</body>
+</html>

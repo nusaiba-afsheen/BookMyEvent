@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-BookMyEvent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@300;400;700&display=swap&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<header>
+        <p class="logo">Admin-BookMyEvent</p>
+        <a href="C:\Users\nusai\OneDrive\Desktop\codes\evt-management\personal-copy\src\templates\admin-event-dashboard.html">Home</a>
+
+</header>
+<body>
+
+    <div class="padding-btw-header-body"></div>
+    <div class="body-style">
+
+        <h1>Add Event Details</h1>
+        <div class="create-event-form">
+            <form method="POST" action="admin-event-dashboard.html" id="create-event-form-id">
+
+                <div class="detail-container">
+                    <label for="event-name">Event Name </label>
+                    <input type="text" id="event-name" name="event-name" required></input>
+                </div>
+
+                <div class="detail-container-radio">
+                    Event Type <br>
+                    <input type="radio" value="tech" name="event-type" >
+                    <label for="event-type">Tech</label>
+                    <input type="radio" value="non-tech" name="event-type" >
+                    <label for="event-type">Non-Tech</label>
+                </div>
+
+                <div class="detail-container-radio">
+                    Event Mode <br>
+                    <input type="radio" value="online" name="event-mode" >
+                    <label for="event-mode">Online</label>
+                    <input type="radio" value="offline" name="event-mode" >
+                    <label for="event-mode">Offline</label>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-desc">Event Description </label>
+                    <textarea id="event-desc" required></textarea>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-team-size">Team size ("1" for solo events)</label>
+                    <input type="number" id="event-team-size" required></input>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-date">Date</label>
+                    <input type="text" id="event-date"></input>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-time">Timings </label>
+                    <input type="text" id="event-time"></input>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-venue">Venue / Meet Link</label>
+                    <input type="text" id="event-venue-or-link"></input>
+                </div>
+               
+                <div class="detail-container">
+                    <label for="event-fee">Entry Fee ("0" for free event)</label>
+                    <input type="number" id="event-fee"></input>
+                </div>
+
+                <div class="detail-container">
+                    <label for="event-payment-link">Payment link ("-" for free event)</label>
+                    <input type="text" id="event-payment-link" required></input>
+                </div> 
+
+                <div class="detail-container invoice-container">
+                    <label for="event-poster">Add event poster</label>
+                    <input type="file" id="event-poster" name="event-poster" accept="image/png , image/jpg , image/jpeg" required></input>
+                </div>
+                
+                <input type="submit" class="primary-btn" value="Confirm Event" style="display: block; margin:2rem auto;"></input>
+
+            </form>
+        </div>
+
+    
+    </div> 
+    
+   
+
+    <script src="../static/scripts/create-event.js"></script>
+
+
+</body>
+<footer>
+    &copy Nusaiba Afsheen
+</footer>
+</html>
